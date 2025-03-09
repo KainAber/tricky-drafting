@@ -32,10 +32,14 @@ To have quick access to the application, an alias can be added to your shell whi
 
 ## Known Limitations
 
+The code queries only instants or cards with "flash" in their oracle text.
+
+Therefore, the following known limitations exist:
 - Activated abilities from the hand (cycling, channel, etc)
 - Alternate casting costs
 - Cost reductions
 - Abilities of face-down permanents
+- False positive hits, e.g., cards with flashback
 
 ## Acknowledgements
 
