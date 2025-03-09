@@ -1,0 +1,115 @@
+/* Reset box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Dark mode styling and centered content */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main heading styling */
+h1 {
+  margin-top: 30px;
+}
+
+/* Hotkeys text styling */
+.hotkeys {
+  font-size: 0.8em;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+/* Styles for text inputs and buttons */
+input[type="text"],
+button {
+  font-size: 1rem;
+  padding: 8px;
+  margin: 5px;
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Adjust the width of the set code text input */
+input[type="text"] {
+  width: calc(5ch);
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+/* Number adjustment control */
+#numberControl {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#numberDisplay {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  min-width: 30px;
+}
+
+/* Card container: grid with 4 columns, no gap */
+#cardContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 0;
+  width: 100%;
+  max-width: 800px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* Style for card images: fill the cell entirely with no margins */
+#cardContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Custom Color Selector Styles */
+.color-selectors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.color-selector {
+  display: inline-block;
+  cursor: pointer;
+}
+.color-selector input[type="checkbox"] {
+  display: none;
+}
+.color-selector img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.7;
+  transition: opacity 0.2s, box-shadow 0.2s, border 0.2s;
+  border-radius: 50%; /* Makes the image appear circular */
+}
+.color-selector input[type="checkbox"]:checked + img {
+  opacity: 1;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px 2px #ffffff;
+  border-radius: 50%; /* Ensures the border follows the circular shape */
+}

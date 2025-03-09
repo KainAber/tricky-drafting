@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tricky Drafting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Tricky Drafting</h1>
+  <p class="hotkeys">
+    <strong>Hotkeys:</strong> Colors: WUBRG or ASDFG; Mana: 1-9 or arrow keys; Reset: Backspace
+  </p>
+
+  <!-- Text input for set code (default "DFT") -->
+  <input type="text" id="setInput" value="DFT">
+  <br><br>
+
+  <!-- Custom Color Selectors using SVGs -->
+  <div class="color-selectors">
+    <label class="color-selector" for="whiteToggle">
+      <input type="checkbox" id="whiteToggle">
+      <img src="{{ url_for('static', filename='images/W.svg') }}" alt="W">
+    </label>
+    <label class="color-selector" for="blueToggle">
+      <input type="checkbox" id="blueToggle">
+      <img src="{{ url_for('static', filename='images/U.svg') }}" alt="U">
+    </label>
+    <label class="color-selector" for="blackToggle">
+      <input type="checkbox" id="blackToggle">
+      <img src="{{ url_for('static', filename='images/B.svg') }}" alt="B">
+    </label>
+    <label class="color-selector" for="redToggle">
+      <input type="checkbox" id="redToggle">
+      <img src="{{ url_for('static', filename='images/R.svg') }}" alt="R">
+    </label>
+    <label class="color-selector" for="greenToggle">
+      <input type="checkbox" id="greenToggle">
+      <img src="{{ url_for('static', filename='images/G.svg') }}" alt="G">
+    </label>
+  </div>
+  <br>
+
+  <!-- Number Adjustment Control -->
+  <div id="numberControl">
+    <button id="minusButton">–</button>
+    <span id="numberDisplay">1</span>
+    <button id="plusButton">+</button>
+  </div>
+  <br>
+
+  <!-- Reset Button (placed below the number counters) -->
+  <div>
+    <button id="resetButton">Reset</button>
+  </div>
+  <br>
+
+  <!-- Card Images Container -->
+  <div id="cardContainer"></div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
