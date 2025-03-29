@@ -3,7 +3,7 @@ function fetchCards() {
   const setCode = document.getElementById('setInput').value.trim();
 
   // Build query string: e.g., "set:DFT t:instant mv<=3 c<=wu"
-  let query = `set:${setCode} t:instant mv<=${number} c<=`;
+  let query = `set:${setCode} (t:instant or o:flash) mv<=${number} c<=`;
 
   if (document.getElementById('whiteToggle').checked) query += 'w';
   if (document.getElementById('blueToggle').checked)  query += 'u';
